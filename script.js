@@ -115,6 +115,7 @@ const cats= [
 ];
 
 (function () {
+    const petLink = document.getElementsByClassName("cat-link") 
     const petNames = document.getElementsByClassName("cat-name") 
     const petImage = document.getElementsByClassName("pet-pic") 
     const favFoods = document.getElementsByClassName("fav-foods")
@@ -122,9 +123,10 @@ const cats= [
     const species = document.getElementsByClassName("species")
 
     for (let i = 0; i < cats.length; i++) {
-        petNames[i].innerText = cats[i].name;
+        petLink[i].innerHTML = `<a href=\"#${cats[i].name}\">${cats[i].name}</a>`;  
+        petNames[i].innerHTML = `<a id=\"${cats[i].name}\">${cats[i].name}</a><br /><a href=\"#card-menu\" class=\"menulink\">back</a>`;
         petImage[i].src = cats[i].photo;
-        favFoods[i].innerText = `Favourite foods: ${(cats[i].favFoods.map(food => food)).join(', ')}`
+        favFoods[i].innerHTML = `Favourite foods: <br/> ${(cats[i].favFoods.map(food => food)).join(', ')}`
         birthYear[i].innerText = `Birth Year: ${cats[i].birthYear}`
         species[i].innerText = `Species: ${cats[i].species}`
     }

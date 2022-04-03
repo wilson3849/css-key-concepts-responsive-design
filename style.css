@@ -6,8 +6,54 @@
     --camel: #D8A47F;
 }
 
+html {
+    font-size: 100%; // base size 100% usually means 16px
+}
+
 body {
     background-color: var(--light);
+}
+
+.card-nav {
+    padding: 2px 10px;
+    list-style: none;
+}
+
+.card-nav li {
+    display: inline-block;
+    padding: 2px 5px;
+}
+
+.card-nav li a:hover{
+    color: var(--coral);
+}
+
+.card-nav li a{
+    color: var(--dark);
+    text-decoration:none;
+}
+
+
+.menulink {
+    font-size: 0.75rem;
+    text-decoration:none;
+    color: var(--teal);
+}
+
+h1 {
+    font-family: "Sofia", sans-serif;    
+    font-size: 2.25rem;
+    color:#D8A47F
+}
+
+.p {
+    font-size: 0.75rem;
+}
+
+.card-container {
+    font-size: 1.5rem;
+    display: flex ;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -17,4 +63,22 @@ body {
 
 img {
     width: 250px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    h1 {
+        font-family: "Trirong", serif;
+        font-size:3.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    h1 {
+        font-family: "Sofia", sans-serif;        
+        font-size: 5rem;
+    }
+    
 }
